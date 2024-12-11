@@ -18,6 +18,7 @@ export default function Home() {
   return (
 
     <div>
+      <h1 className="flex justify-center p-8 text-[60px]"> Belajar ShadcnUI</h1>
       <div>
         <Calendar
           mode="single"
