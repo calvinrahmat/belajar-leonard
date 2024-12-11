@@ -19,43 +19,44 @@ export default function Home() {
 
     <div>
       <h1 className="flex justify-center p-8 text-[60px]"> Belajar ShadcnUI</h1>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        <div>
         <Calendar
           mode="single"
           selected={date}
           onSelect={setDate}
           className="rounded-md border" />
-      </div>
+       </div>
 
-      <div>
-        <Button>Pertama</Button>
-        <Button variant="secondary">Kedua</Button>
-        <Button variant="destructive">Destructive</Button>
-        <Button variant="outline">Outline</Button>
-        <Button variant="ghost">Ghost</Button>
-      </div>
+        <div>
+          <Button>Pertama</Button>
+          <Button variant="secondary">Kedua</Button>
+          <Button variant="destructive">Destructive</Button>
+          <Button variant="outline">Outline</Button>
+          <Button variant="ghost">Ghost</Button>
+        </div>
 
-      <div>
-        {cardData.map(
-          (
-            {cardTitle, cardDescription, cardContent, cardFooter}, index
-          ) => (
-            <Card key={index}>
-            <CardHeader>
-              <CardTitle>{cardTitle}</CardTitle>
-              <CardDescription>{cardDescription}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>{cardContent}</p>
-            </CardContent>
-            <CardFooter>
-              <p>{cardFooter}</p>
-            </CardFooter>
-          </Card>
-          )
-          )}            
-      </div>  
+        <div>
+          {cardData.map(
+            (
+              {cardTitle, cardDescription, cardContent, cardFooter}, index
+            ) => (
+              <Card key={index}>
+              <CardHeader>
+                <CardTitle>{cardTitle}</CardTitle>
+                <CardDescription>{cardDescription}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>{cardContent}</p>
+              </CardContent>
+              <CardFooter>
+                <p>{cardFooter}</p>
+              </CardFooter>
+            </Card>
+            )
+            )}            
+        </div>  
+      </div>
     </div>
-  )    
-  
+  )      
 }
