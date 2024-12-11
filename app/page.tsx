@@ -27,7 +27,10 @@ export default function Home() {
 
       <div>
         <Button>Pertama</Button>
-        <Button variant="secondary">Kedua</Button> 
+        <Button variant="secondary">Kedua</Button>
+        <Button variant="destructive">Destructive</Button>
+        <Button variant="outline">Outline</Button>
+        <Button variant="ghost">Ghost</Button>
       </div>
 
       <div>
