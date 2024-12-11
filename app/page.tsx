@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       <h1 className="flex justify-center p-8 text-[60px]"> Belajar ShadcnUI</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-        <div>
+        <div className="flex items-center justify-center space-x-4">
         <Calendar
           mode="single"
           selected={date}
@@ -31,9 +31,9 @@ export default function Home() {
         <div>
           <Button>Pertama</Button>
           <Button variant="secondary">Kedua</Button>
-          <Button variant="destructive">Destructive</Button>
-          <Button variant="outline">Outline</Button>
-          <Button variant="ghost">Ghost</Button>
+          <Button variant="destructive">Ketiga</Button>
+          <Button variant="outline">Keempat</Button>
+          <Button variant="ghost">Kelima</Button>
         </div>
 
         <div>
