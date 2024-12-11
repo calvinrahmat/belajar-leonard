@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -7,26 +9,40 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Calendar } from "@/components/ui/calendar"
+import React from "react"
 
 export default function Home() {
+  const [date, setDate] = React.useState<Date | undefined>(new Date())
   return (
+
     <div>
+
       <div>
-      <Card>
-       <CardHeader>
-         <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
-      </CardHeader>
-      <CardContent>
-       <p>Card Content</p>
-      </CardContent>
-       <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
-      </Card>
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          className="rounded-md border" />
       </div>
       
-      <Button>Click me</Button>
-    </div>
-  )
+      <div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Card Title</CardTitle>
+              <CardDescription>Card Description</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p>Card Content</p>
+            </CardContent>
+            <CardFooter>
+              <p>Card Footer</p>
+            </CardFooter>
+          </Card>
+      </div>
+        
+        <Button>Click me</Button>
+      </div>
+  )    
+  
 }
