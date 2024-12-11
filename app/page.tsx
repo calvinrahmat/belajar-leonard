@@ -28,7 +28,7 @@ export default function Home() {
           className="rounded-md border" />
        </div>
 
-        <div>
+        <div className="flex flex-col justify-center items-center space-y-4">
           <Button>Pertama</Button>
           <Button variant="secondary">Kedua</Button>
           <Button variant="destructive">Ketiga</Button>
