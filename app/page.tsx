@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -17,7 +15,6 @@ export default function Home() {
   return (
 
     <div>
-
       <div>
         <Calendar
           mode="single"
@@ -25,7 +22,9 @@ export default function Home() {
           onSelect={setDate}
           className="rounded-md border" />
       </div>
-      
+
+      <div><Button>Click me</Button></div>
+
       <div>
           <Card>
             <CardHeader>
@@ -39,10 +38,8 @@ export default function Home() {
               <p>Card Footer</p>
             </CardFooter>
           </Card>
-      </div>
-        
-        <Button>Click me</Button>
-      </div>
+      </div>  
+    </div>
   )    
   
 }
