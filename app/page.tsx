@@ -41,7 +41,7 @@ export default function Home() {
             (
               {cardTitle, cardDescription, cardContent, cardFooter}, index
             ) => (
-              <Card key={index} className="w-70 h-60">
+              <Card key={index} className="w-70 h-100">
               <CardHeader>
                 <CardTitle>{cardTitle}</CardTitle>
                 <CardDescription>{cardDescription}</CardDescription>
