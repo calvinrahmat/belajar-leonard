@@ -25,7 +25,10 @@ export default function Home() {
           className="rounded-md border" />
       </div>
 
-      <div><Button>Click me</Button></div>
+      <div>
+        <Button>Pertama</Button>
+        <Button variant="secondary">Kedua</Button> 
+      </div>
 
       <div>
           <Card>
