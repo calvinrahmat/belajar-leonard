@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card"
 import { Calendar } from "@/components/ui/calendar"
 import React from "react"
+import cardData from "./data/card";
 
 export default function Home() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
@@ -34,18 +35,24 @@ export default function Home() {
       </div>
 
       <div>
-          <Card>
+        {cardData.map(
+          (
+            {cardTitle, cardDescription, cardContent, cardFooter}, index
+          ) => (
+            <Card key={index}>
             <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-              <CardDescription>Card Description</CardDescription>
+              <CardTitle>{cardTitle}</CardTitle>
+              <CardDescription>{cardDescription}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Card Content</p>
+              <p>{cardContent}</p>
             </CardContent>
             <CardFooter>
-              <p>Card Footer</p>
+              <p>{cardFooter}</p>
             </CardFooter>
           </Card>
+          )
+          )}            
       </div>  
     </div>
   )    
