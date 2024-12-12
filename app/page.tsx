@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -10,8 +11,15 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Calendar } from "@/components/ui/calendar"
-import React from "react"
 import cardData from "./data/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
 
 export default function Home() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
@@ -55,7 +63,16 @@ export default function Home() {
             </Card>
             )
             )}            
-        </div>  
+        </div>
+        <div>
+          <Carousel>
+            <CarouselContent>
+              <CarouselItem className="basis-1/3">...</CarouselItem>
+              <CarouselItem className="basis-1/3">...</CarouselItem>
+              <CarouselItem className="basis-1/3">...</CarouselItem>
+            </CarouselContent>
+          </Carousel>
+        </div>
       </div>
     </div>
   )      
