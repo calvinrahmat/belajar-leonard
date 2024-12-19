@@ -43,7 +43,7 @@ export default function Home() {
           <Button variant="ghost">Kelima</Button>
         </div>
 
-        <div className="md:col-span-2 grid grid-cols-1 md:gr-cols-2 lg:grid-cols-3 gap-2 p-2">
+        <div className="md:col-span-2 grid grid-cols-1 md:gr-cols-2 lg:grid-cols-3 gap-5 p-2">
           {cardData.map(
             (
               {cardTitle, cardDescription, cardContent, cardFooter}, index
