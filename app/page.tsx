@@ -66,11 +66,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div className="flex items-center justify-center">
         <Carousel className="w-full max-w-xs">
       <CarouselContent>
         {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="basis-1/3">
+          <CarouselItem key={index}>
             <div className="p-1">
               <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6">
