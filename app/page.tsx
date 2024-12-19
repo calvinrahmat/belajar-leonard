@@ -63,8 +63,9 @@ export default function Home() {
             )
             )}            
         </div>
+      </div>
 
-        <div className="flex justify-center">
+      <div className="flex justify-center">
         <Carousel className="w-full max-w-xs">
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
@@ -83,7 +84,7 @@ export default function Home() {
       <CarouselNext />
     </Carousel>
         </div>
-      </div>
+        
     </div>
   )      
 }
