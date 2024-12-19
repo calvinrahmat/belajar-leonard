@@ -25,7 +25,7 @@ export default function Home() {
   return (
     
     <div>
-      <h1 className="flex justify-center text-[150px]">ShadcnUI</h1>
+      <h1 className="flex justify-center text-[150px]">ShadcnUI sampe JAGO</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
         <div className="flex items-center justify-center space-x-4">
         <Calendar
@@ -69,12 +69,12 @@ export default function Home() {
       <div className="flex items-center justify-center">
         <Carousel className="w-full max-w-xs">
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
+        {Array.from({ length: 10 }).map((_, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-10">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+              <CardContent className="flex aspect-square items-center justify-center p-6">
+              <span className="text-3xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>
             </div>
