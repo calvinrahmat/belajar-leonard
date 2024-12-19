@@ -58,7 +58,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <p>{cardFooter}</p>
-                <Button>Photo</Button>
+                <Button variant="outline">Photo</Button>
               </CardFooter>
             </Card>
             )
@@ -70,7 +70,7 @@ export default function Home() {
         <Carousel className="w-full max-w-xs">
       <CarouselContent>
         {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
             <div className="p-1">
               <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6">
