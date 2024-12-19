@@ -65,7 +65,7 @@ export default function Home() {
         </div>
 
         <div>
-        <Carousel className="w-full max-w-xs">
+        <Carousel className="justify-center w-full max-w-xs">
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
