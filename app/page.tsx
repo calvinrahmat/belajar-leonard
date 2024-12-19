@@ -63,14 +63,9 @@ export default function Home() {
             )
             )}            
         </div>
-      </div>
-    </div>
-  )      
-}
 
-export function CarouselDemo() {
-  return (
-    <Carousel className="w-full max-w-xs">
+        <div>
+        <Carousel className="w-full max-w-xs">
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
@@ -87,5 +82,13 @@ export function CarouselDemo() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
+        </div>
+      </div>
+    </div>
+  )      
+}
+
+export function CarouselDemo() {
+  return (
   )
 }
