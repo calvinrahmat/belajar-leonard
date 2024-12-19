@@ -70,10 +70,10 @@ export default function Home() {
         <Carousel className="w-full max-w-xs">
       <CarouselContent>
         {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-            <div className="p-1">
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
+            <div className="p-5">
               <Card>
-              <CardContent className="flex aspect-square items-center justify-center p-6">
+              <CardContent className="flex aspect-square items-center justify-center p-10">
               <span className="text-3xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>
