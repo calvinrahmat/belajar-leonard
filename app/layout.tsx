@@ -30,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    
       <SidebarProvider>
       <AppSidebar />
       <main>
@@ -37,7 +38,7 @@ export default function RootLayout({
         {children}
       </main>
     </SidebarProvider>
-    
+
       <ThemeProvider
             attribute="class"
             defaultTheme="dark"
