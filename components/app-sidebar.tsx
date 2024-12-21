@@ -30,27 +30,27 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Home",
+    title: "Equip",
     url: "#",
     icon: Home,
   },
   {
-    title: "Inbox",
+    title: "Item",
     url: "#",
     icon: Inbox,
   },
   {
-    title: "Calendar",
+    title: "Ako",
     url: "#",
     icon: Calendar,
   },
   {
-    title: "Search",
+    title: "File",
     url: "#",
     icon: Search,
   },
   {
-    title: "Settings",
+    title: "Map",
     url: "#",
     icon: Settings,
   },
@@ -62,7 +62,7 @@ export function AppSidebar() {
       <SidebarHeader />  
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Main Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -86,9 +86,9 @@ export function AppSidebar() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <SidebarMenuButton>
-                  <a href="#">
-                     <Home />
-                    <span>Home</span> </a>
+                    <a href="#">
+                    <span>Soul</span>
+                    </a>
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
@@ -96,13 +96,13 @@ export function AppSidebar() {
                   className="w-[--radix-popper-anchor-width]"
                 >
                   <DropdownMenuItem>
-                    <span>Account</span>
+                    <span>Red Soul</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <span>Billing</span>
+                    <span>Blue Soul</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <span>Sign out</span>
+                    <span>Yellow Soul</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
