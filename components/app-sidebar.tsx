@@ -9,6 +9,7 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
+  SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
@@ -54,11 +55,6 @@ const items = [
     url: "#",
     icon: Map,
   },
-  {
-    title: "Soul",
-    url: "#",
-    icon: Flame,
-  },
 ]
 
 export function AppSidebar() {
@@ -91,9 +87,9 @@ export function AppSidebar() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <SidebarMenuButton>
-                    <a href="#">
-                    <Flame></Flame>
-                    <span>Soul</span>
+                     <a href="#">
+                     <Flame />
+                     <span>Soul</span>
                     </a>
                   </SidebarMenuButton>
                 </DropdownMenuTrigger>
