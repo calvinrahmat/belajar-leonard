@@ -21,18 +21,6 @@ export const metadata: Metadata = {
   description: "Pokonya kalo ga bisa-bisa juga, kebangetan banget",
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
-  )
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,6 +30,14 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <SidebarProvider>
+      <AppSidebar />
+      <main>
+        <SidebarTrigger />
+        {children}
+      </main>
+    </SidebarProvider>
+    
       <ThemeProvider
             attribute="class"
             defaultTheme="dark"
