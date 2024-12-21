@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Album, Axe, Boxes, Flame, Map, Sparkles } from "lucide-react"
 
 import {
   Sidebar,
@@ -32,27 +32,32 @@ const items = [
   {
     title: "Equip",
     url: "#",
-    icon: Home,
+    icon: Axe,
   },
   {
     title: "Item",
     url: "#",
-    icon: Inbox,
+    icon: Boxes,
   },
   {
     title: "Ako",
     url: "#",
-    icon: Calendar,
+    icon: Sparkles,
   },
   {
     title: "File",
     url: "#",
-    icon: Search,
+    icon: Album,
   },
   {
     title: "Map",
     url: "#",
-    icon: Settings,
+    icon: Map,
+  },
+  {
+    title: "Soul",
+    url: "#",
+    icon: Flame,
   },
 ]
 
@@ -87,6 +92,7 @@ export function AppSidebar() {
                 <DropdownMenuTrigger asChild>
                   <SidebarMenuButton>
                     <a href="#">
+                    <Flame></Flame>
                     <span>Soul</span>
                     </a>
                   </SidebarMenuButton>
