@@ -1,171 +1,175 @@
-import { Album, Axe, Boxes, Flame, Map, Sparkles } from "lucide-react"
+"use client"
 
+import * as React from "react"
+import {
+  AudioWaveform,
+  BookOpen,
+  Bot,
+  Command,
+  Frame,
+  GalleryVerticalEnd,
+  Map,
+  PieChart,
+  Settings2,
+  SquareTerminal,
+} from "lucide-react"
+
+import { NavMain } from "@/components/nav-main"
+import { NavProjects } from "@/components/nav-projects"
+import { NavUser } from "@/components/nav-user"
+import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
+  SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuAction,
-  SidebarMenuButton,
-  SidebarMenuItem,
+  SidebarRail,
 } from "@/components/ui/sidebar"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuPortal,
-    DropdownMenuSeparator,
-    DropdownMenuShortcut,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
 
-// Buat Main Menu Onimusha
+// This is sample data.
 const data = {
-    items : [
+  user: {
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
+  teams: [
+    {
+      name: "Acme Inc",
+      logo: GalleryVerticalEnd,
+      plan: "Enterprise",
+    },
+    {
+      name: "Acme Corp.",
+      logo: AudioWaveform,
+      plan: "Startup",
+    },
+    {
+      name: "Evil Corp.",
+      logo: Command,
+      plan: "Free",
+    },
+  ],
+  navMain: [
+    {
+      title: "Playground",
+      url: "#",
+      icon: SquareTerminal,
+      isActive: true,
+      items: [
         {
-            title: "Equip",
-            url: "#",
-            icon: Axe,
-            isActive: true,
-            items: [
-                {
-                    title: "Equip",
-                    url: "#",
-                    icon: Axe,
-                }
-            ]
+          title: "History",
+          url: "#",
         },
         {
-            title: "Item",
-            url: "#",
-            icon: Boxes,
-            isActive: true,
-            items: [
-                {
-                    title: "Item",
-                    url: "#",
-                    icon: Boxes,
-                }
-            ]
+          title: "Starred",
+          url: "#",
         },
         {
-            title: "Item",
-            url: "#",
-            icon: Boxes,
-            isActive: true,
-            items: [
-                {
-                    title: "Item",
-                    url: "#",
-                    icon: Boxes,
-                }
-            ] 
+          title: "Settings",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Models",
+      url: "#",
+      icon: Bot,
+      items: [
+        {
+          title: "Genesis",
+          url: "#",
         },
         {
-            title: "Ako",
-            url: "#",
-            icon: Sparkles,
-            isActive: true,
-            items: [
-                {
-                    title: "Ako",
-                    url: "#",
-                    icon: Sparkles,
-                }
-            ]   
+          title: "Explorer",
+          url: "#",
         },
         {
-            title: "File",
-            url: "#",
-            icon: Album,
-            isActive: true,
-            items: [
-                {
-                    title: "File",
-                    url: "#",
-                    icon: Album,
-                }
-            ] 
+          title: "Quantum",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Documentation",
+      url: "#",
+      icon: BookOpen,
+      items: [
+        {
+          title: "Introduction",
+          url: "#",
         },
         {
-            title: "Map",
-            url: "#",
-            icon: Map,
-            isActive: true,
-            items: [
-                {
-                    title: "Map",
-                    url: "#",
-                    icon: Map,
-                }
-            ] 
+          title: "Get Started",
+          url: "#",
         },
-    ]
+        {
+          title: "Tutorials",
+          url: "#",
+        },
+        {
+          title: "Changelog",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Settings",
+      url: "#",
+      icon: Settings2,
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
+        },
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "Design Engineering",
+      url: "#",
+      icon: Frame,
+    },
+    {
+      name: "Sales & Marketing",
+      url: "#",
+      icon: PieChart,
+    },
+    {
+      name: "Travel",
+      url: "#",
+      icon: Map,
+    },
+  ],
 }
 
-export function AppSidebar() {
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-     <Sidebar collapsible= "icon">
-      <SidebarHeader />  
+    <Sidebar collapsible="icon" {...props}>
+      <SidebarHeader>
+        <TeamSwitcher teams={data.teams} />
+      </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Main Menu</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        <NavMain items={data.navMain} />
+      //  <NavProjects projects={data.projects} /> //
       </SidebarContent>
-
       <SidebarFooter>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <SidebarMenuButton>
-                     <a href="#">
-                     <Flame />
-                     <span>Soul</span>
-                    </a>
-                  </SidebarMenuButton>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  side="top"
-                  className="w-[--radix-popper-anchor-width]"
-                >
-                  <DropdownMenuItem>
-                    <span>Red Soul</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <span>Blue Soul</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <span>Yellow Soul</span>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarFooter>
+        <NavUser user={data.user} />
+      </SidebarFooter>
+      <SidebarRail />
     </Sidebar>
   )
 }
