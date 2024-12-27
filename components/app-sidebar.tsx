@@ -28,34 +28,89 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 
-// Menu items.
-const items = [
-  {
-    title: "Equip",
-    url: "#",
-    icon: Axe,
-  },
-  {
-    title: "Item",
-    url: "#",
-    icon: Boxes,
-  },
-  {
-    title: "Ako",
-    url: "#",
-    icon: Sparkles,
-  },
-  {
-    title: "File",
-    url: "#",
-    icon: Album,
-  },
-  {
-    title: "Map",
-    url: "#",
-    icon: Map,
-  },
-]
+// Buat Main Menu Onimusha
+const data = {
+    items : [
+        {
+            title: "Equip",
+            url: "#",
+            icon: Axe,
+            isActive: true,
+            items: [
+                {
+                    title: "Equip",
+                    url: "#",
+                    icon: Axe,
+                }
+            ]
+        },
+        {
+            title: "Item",
+            url: "#",
+            icon: Boxes,
+            isActive: true,
+            items: [
+                {
+                    title: "Item",
+                    url: "#",
+                    icon: Boxes,
+                }
+            ]
+        },
+        {
+            title: "Item",
+            url: "#",
+            icon: Boxes,
+            isActive: true,
+            items: [
+                {
+                    title: "Item",
+                    url: "#",
+                    icon: Boxes,
+                }
+            ] 
+        },
+        {
+            title: "Ako",
+            url: "#",
+            icon: Sparkles,
+            isActive: true,
+            items: [
+                {
+                    title: "Ako",
+                    url: "#",
+                    icon: Sparkles,
+                }
+            ]   
+        },
+        {
+            title: "File",
+            url: "#",
+            icon: Album,
+            isActive: true,
+            items: [
+                {
+                    title: "File",
+                    url: "#",
+                    icon: Album,
+                }
+            ] 
+        },
+        {
+            title: "Map",
+            url: "#",
+            icon: Map,
+            isActive: true,
+            items: [
+                {
+                    title: "Map",
+                    url: "#",
+                    icon: Map,
+                }
+            ] 
+        },
+    ]
+}
 
 export function AppSidebar() {
   return (
